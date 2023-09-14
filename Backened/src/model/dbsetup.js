@@ -59,6 +59,32 @@ const flightDb = [{
         flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
         flightTimings: ["09:00-11:30", "04:00-07:00", "12:00-14:30", "18:00-20:30", "00:30-02:00"],
         prices: [2500, 2200, 2400, 3200, 2200]
+},
+{
+    routeId: "GG001",
+        origin: "goa",
+        destination: "gorakhpur",
+        flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
+        flightTimings: ["09:00-11:30", "04:00-07:00", "12:00-14:30", "18:00-20:30", "00:30-02:00"],
+        prices: [12500, 12200, 12400, 13200, 12200]
+},
+{
+    routeId: "BG001",
+        origin: "bangalore",
+        destination: "gorakhpur",
+        flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
+        flightTimings: ["09:00-11:30", "04:00-07:00", "12:00-14:30", "18:00-20:30", "00:30-02:00"],
+        prices: [10000, 14200, 13400, 13200, 13300]
+}
+,{
+    
+        routeId: "RG001",
+            origin: "ranchi",
+            destination: "gorakhpur",
+            flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
+            flightTimings: ["09:00-11:30", "04:00-07:00", "12:00-14:30", "18:00-20:30", "00:30-02:00"],
+            prices: [10000, 14200, 13400, 13200, 13300]
+    
 }
 ]
 const bookingDB = [{
