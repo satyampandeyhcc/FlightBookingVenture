@@ -4,7 +4,13 @@ Mongoose.Promise = global.Promise;
 Mongoose.set('useCreateIndex', true)
 const url = "mongodb+srv://satyampandeyhcc:satyam123@cluster0.iukbirw.mongodb.net/ticketbookingsystem?retryWrites=true&w=majority";
 //ADD
-Mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
+Mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
+  });
 const passengerDetailsSchema = Schema({
     title: String,
     firstName: String,

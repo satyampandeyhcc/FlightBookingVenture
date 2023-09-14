@@ -36,7 +36,7 @@ const flightDb = [{
 const bookingDB = [{
     bookingId: 1001,
     flightId: "SJ-101",
-    departureDate: "03-04-2019",
+    departureDate: "11-09-2023",
     origin: "delhi",
     destination: "mumbai",
     timing: "09:00-11:30",
