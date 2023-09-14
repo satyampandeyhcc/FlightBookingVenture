@@ -3,22 +3,11 @@ const validator = require('../utilities/validator');
 const exec = require('child-process-promise').exec;
 const fs = require('fs');
 const path = require("path")
-// const parser = require("./parser");
+
 
 let fBookingService = {}
 
-// fBookingService.evaluate = () => {
-//     evaluationPath = path.join(__dirname, "../../../SkyTracksUI");
-//     console.log("Begin testing!!");
-//     return exec(`cd ${evaluationPath} && npm test`)
-//         .then((response) => {
-//             let content = fs.readFileSync("../../SkyTracksUI/testReport.json", 'utf8');
-//             return parser.generateTestReport(content);
-//         }).catch((err) => {
-//             let content = fs.readFileSync("../../flight-booking/testReport.json", 'utf8');
-//             return parser.generateTestReport(content);
-//         })
-// }
+
 
 
 fBookingService.getFlightOnRoute = (origin, destination) => {

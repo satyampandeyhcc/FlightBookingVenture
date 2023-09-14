@@ -13,17 +13,7 @@ routing.get('/setupDb', (req, res, next) => {
     })
 })
 
-routing.get('/evaluate', (req, res, next) => {
-    console.log("Request came!!");
-    flightBookingServ.evaluate()
-        .then((data) => {
-            console.log("Completed success!!");
-            res.send(data)
-        }).catch((err) => {
-            console.log("Completed err!!");
-            next(err)
-        })
-})
+
 
 routing.get('/getFlights/:origin/:destination', (req, res, next) => {
     let origin = req.params.origin;
