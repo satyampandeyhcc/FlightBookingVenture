@@ -31,7 +31,35 @@ const flightDb = [{
         flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
         flightTimings: ["09:00-11:30", "04:00-07:00", "12:00-14:30", "18:00-20:30", "00:30-02:00"],
         prices: [2234, 2100, 3400, 4200, 2300],
-    }
+    },
+    {
+        routeId: "AK001",
+        origin: "agra",
+        destination: "kanpur",
+        flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
+        flightTimings: ["09:00-11:30", "04:00-07:00", "12:00-14:30", "18:00-20:30", "00:30-02:00"],
+        prices: [2224, 2200, 3100, 4100, 2400],
+
+
+
+    },
+    {
+        routeId: "PK001",
+        origin: "punjab",
+        destination: "kolkata",
+        flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
+        flightTimings: ["09:00-11:30", "04:00-07:00", "12:00-14:30", "18:00-20:30", "00:30-02:00"],
+        prices: [2234, 2100, 3400, 4200, 2300]
+    },
+
+{
+    routeId: "VG001",
+        origin: "varanasi",
+        destination: "gorakhpur",
+        flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
+        flightTimings: ["09:00-11:30", "04:00-07:00", "12:00-14:30", "18:00-20:30", "00:30-02:00"],
+        prices: [2500, 2200, 2400, 3200, 2200]
+}
 ]
 const bookingDB = [{
     bookingId: 1001,
@@ -57,40 +85,40 @@ const bookingDB = [{
     ]
 }]
 
-// exports.setupDb = () => {
-//     return collection.getBookingCollection().then((booking) => {
-//         return booking.deleteMany().then(() => {
-//             return booking.insertMany(bookingDB).then(() => {
-//                 return collection.getFlightCollection().then((flights) => {
-//                     return flights.deleteMany().then(() => {
-//                         return flights.insertMany(flightDb).then((data) => {
-//                             if (data) return "Insertion Successfull"
-//                             else {
-//                                 let err = new Error("Insertion failed");
-//                                 err.status = 400;
-//                                 throw err;
-//                             }
-//                         })
-//                     })
-//                 })
-//             })
-//         })
-//     })
-// }
+exports.setupDb = () => {
+    return collection.getBookingCollection().then((booking) => {
+        return booking.deleteMany().then(() => {
+            return booking.insertMany(bookingDB).then(() => {
+                return collection.getFlightCollection().then((flights) => {
+                    return flights.deleteMany().then(() => {
+                        return flights.insertMany(flightDb).then((data) => {
+                            if (data) return "Insertion Successfull"
+                            else {
+                                let err = new Error("Insertion failed");
+                                err.status = 400;
+                                throw err;
+                            }
+                        })
+                    })
+                })
+            })
+        })
+    })
+}
 
-exports.setupDb = async () => {
-    try {
-        const booking = await collection.getBookingCollection();
-        await booking.deleteMany();
-        await booking.insertMany(bookingDB);
+// exports.setupDb = async () => {
+//     try {
+//         const booking = await collection.getBookingCollection();
+//         await booking.deleteMany();
+//         await booking.insertMany(bookingDB);
 
-        const flights = await collection.getFlightCollection();
-        await flights.deleteMany();
-        const data = await flights.insertMany(flightDb);
+//         const flights = await collection.getFlightCollection();
+//         await flights.deleteMany();
+//         const data = await flights.insertMany(flightDb);
 
-        if (data) return "Insertion Successful";
-        else throw new Error("Insertion failed");
-    } catch (err) {
-        throw err;
-    }
-};
+//         if (data) return "Insertion Successful";
+//         else throw new Error("Insertion failed");
+//     } catch (err) {
+//         throw err;
+//     }
+// };

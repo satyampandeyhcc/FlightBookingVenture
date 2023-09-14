@@ -91,7 +91,7 @@ describe("FLIGHT DETAILS COMPONENT",()=>{
 const bookingDetails={
   origin:"Mumbai",
   destination:"Bangalore",
-  departureDate:"2020-02-02",
+  departureDate:"2023-02-02",
   noOfTickets:2,
   flightId:"UA-323",
   timing:"04:00-07:00",
@@ -100,7 +100,7 @@ const bookingDetails={
 const successMessage = {
   bookingId: 1002,
   flightId: "GO-101",
-  departureDate: "2020-02-02",
+  departureDate: "2023-02-02",
   origin: "Mumbai",
   destination: "Bangalore",
   timing: "09:00-11:30",
