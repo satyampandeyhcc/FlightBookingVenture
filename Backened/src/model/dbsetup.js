@@ -193,6 +193,20 @@ const flightDb = [
       "00:30-02:00",
     ],
     prices: [13245, 11200, 12400, 13100, 11300],
+  },
+  {
+    routeId: "  PG001",
+    origin: "bangalore",
+    destination: "ranchi",
+    flightIds: ["SJ-101", "SJ-323", "GI-432", "GA-427", "GI-986"],
+    flightTimings: [
+      "09:00-11:30",
+      "04:00-07:00",
+      "12:00-14:30",
+      "18:00-20:30",
+      "00:30-02:00",
+    ],
+    prices: [13333, 11200, 12400, 13100, 11300],
   }
 ];
 const bookingDB = [
