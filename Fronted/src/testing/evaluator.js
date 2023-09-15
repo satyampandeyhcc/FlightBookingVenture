@@ -10,7 +10,7 @@ class Evaluator extends Component {
         this.externalWindow = null;
         this.state = {
             dbMessage: null,
-            testData: "",
+           
         }
     }
     setUpDb = () => {
@@ -48,8 +48,7 @@ class Evaluator extends Component {
                     </div>
                 </div>
                 
-                {/* Display the test cases in a new window */}
-                {this.state.testData ? ReactDOM.createPortal(this.props.children, this.containerEl) : null}
+     
             </div>
 
         )
