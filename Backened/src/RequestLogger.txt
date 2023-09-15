@@ -207,3 +207,5 @@ Fri Sep 15 2023 09:27:39 GMT+0530 (India Standard Time) GET /getFlights/raipur/g
 Fri Sep 15 2023 09:27:45 GMT+0530 (India Standard Time) GET /setupDb
 Fri Sep 15 2023 09:27:47 GMT+0530 (India Standard Time) GET /getFlights/raipur/goa
 Fri Sep 15 2023 09:28:01 GMT+0530 (India Standard Time) POST /bookFlight/
+Fri Sep 15 2023 15:57:39 GMT+0530 (India Standard Time) GET /getFlights/Ranchi/Gorakhpur
+Fri Sep 15 2023 15:58:10 GMT+0530 (India Standard Time) POST /bookFlight/
